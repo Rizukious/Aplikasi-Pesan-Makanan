@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Aplikasi Pesan Makanan</string>
+    <string name="label_menu_1">Daftar Meja</string>
+    <string name="meja_1">Meja 1</string>
+    <string name="meja_2">Meja 2</string>
+    <string name="meja_3">Meja 3</string>
+    <string name="meja_4">Meja 4</string>
+    <string name="label_form_empty">Daftar Menu</string>
+    <string name="btn_hitung">Hitung</string>
+    <string name="btn_kembali_menu_awal">Home</string>
+    <string name="label_bayar_empty">Daftar Bayar</string>
+    <string name="btn_kembali_form_menu">Menu</string>
+    <string name="label_sub_total">Sub Total</string>
+    <string name="label_grand_total">Grand Total</string>
+    <string name="harga_dibayar">Harga yang harus dibayar</string>
+</resources>
