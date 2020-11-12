@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".DaftarBayarFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="200dp"
+            android:layout_margin="16dp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="380dp"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/label_daftar_bayar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/label_bayar_empty"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/label_daftar_bayar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_nama_makanan_1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Makanan"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_harga_1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Harga"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_jumlah_1"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Qty"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_nama_makanan_2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Makanan"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_harga_2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Harga"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_jumlah_2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Qty"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_nama_makanan_3"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Makanan"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_harga_3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Harga"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_jumlah_3"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Qty"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/label_sub_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/label_sub_total"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout9"
+                    android:layout_margin="20dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/label_sub_total"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_sub_makanan_1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Makanan"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_sub_harga_1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Harga"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_sub_makanan_2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Makanan"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_sub_harga_2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Harga"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_sub_makanan_3"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Makanan"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_sub_harga_3"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Harga"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/label_grand_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:text="@string/label_grand_total"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout12"
+                    android:layout_margin="20dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/label_grand_total"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_harga_bayar"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/harga_dibayar"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_grand_total"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Harga"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/linearlayout13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp"
+                    >
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/btn_kembali_menu_awal"
+                        android:layout_marginRight="10dp"
+                        android:onClick="pilihMeja"
+                        />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_kembali_form_menu"
+                        android:onClick="clearMenu"
+                        />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+

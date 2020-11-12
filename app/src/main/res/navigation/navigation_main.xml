@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/daftarMejaFragment">
+    <fragment
+        android:id="@+id/daftarMejaFragment"
+        android:name="com.example.aplikasipesanmakanan.DaftarMejaFragment"
+        android:label="fragment_daftar_meja"
+        tools:layout="@layout/fragment_daftar_meja" >
+        <action
+            android:id="@+id/action_daftarMejaFragment_to_daftarMenuFragment"
+            app:destination="@id/daftarMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/daftarBayarFragment"
+        android:name="com.example.aplikasipesanmakanan.DaftarBayarFragment"
+        android:label="fragment_daftar_bayar"
+        tools:layout="@layout/fragment_daftar_bayar" />
+    <fragment
+        android:id="@+id/daftarMenuFragment"
+        android:name="com.example.aplikasipesanmakanan.DaftarMenuFragment"
+        android:label="fragment_daftar_menu"
+        tools:layout="@layout/fragment_daftar_menu" >
+        <action
+            android:id="@+id/action_daftarMenuFragment_to_daftarBayarFragment"
+            app:destination="@id/daftarBayarFragment" />
+    </fragment>
+</navigation>
