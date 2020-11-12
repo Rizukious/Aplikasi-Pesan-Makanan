@@ -17,7 +17,23 @@
         android:id="@+id/daftarBayarFragment"
         android:name="com.example.aplikasipesanmakanan.DaftarBayarFragment"
         android:label="fragment_daftar_bayar"
-        tools:layout="@layout/fragment_daftar_bayar" />
+        tools:layout="@layout/fragment_daftar_bayar" >
+        <argument
+            android:name="product1"
+            app:argType="com.example.aplikasipesanmakanan.Product" />
+        <argument
+            android:name="product2"
+            app:argType="com.example.aplikasipesanmakanan.Product" />
+        <argument
+            android:name="product3"
+            app:argType="com.example.aplikasipesanmakanan.Product" />
+        <argument
+            android:name="nomorMeja"
+            app:argType="string" />
+        <argument
+            android:name="total"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/daftarMenuFragment"
         android:name="com.example.aplikasipesanmakanan.DaftarMenuFragment"
@@ -26,5 +42,8 @@
         <action
             android:id="@+id/action_daftarMenuFragment_to_daftarBayarFragment"
             app:destination="@id/daftarBayarFragment" />
+        <argument
+            android:name="noMeja"
+            app:argType="string" />
     </fragment>
 </navigation>

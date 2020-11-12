@@ -5,55 +5,55 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.example.aplikasipesanmakanan.databinding.FragmentDaftarMenuBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [DaftarMenuFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DaftarMenuFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding : FragmentDaftarMenuBinding
+    lateinit var productSatu : Product
+    lateinit var productDua : Product
+    lateinit var productTiga : Product
+    private var total = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_daftar_menu, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_daftar_menu, container, false)
+        binding.apply {
+            val args = DaftarMenuFragmentArgs.fromBundle(requireArguments())
+            nomorMeja = args.noMeja
+        }
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment DaftarMenuFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            DaftarMenuFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private fun ambilData(binding: FragmentDaftarMenuBinding) {
+        total = 0
+        productSatu = Product()
+        productDua = Product()
+        productTiga = Product()
+
+        binding.apply {
+            if (etNamaMakanan1.text.isNotEmpty() || etHarga1.text.isNotEmpty() || etJumlah1.text.isNotEmpty()) {
+                productSatu.namaMenu = etNamaMakanan1.text.toString()
+                productSatu.hargaMenu = etHarga1.text.toString().toInt()
+                productSatu.jumlahMenu = etJumlah1.text.toString().toInt()
+                total += productSatu.subTotal
             }
+            if (etNamaMakanan2.text.isNotEmpty() || etHarga2.text.isNotEmpty() || etJumlah2.text.isNotEmpty()) {
+                productDua.namaMenu = etNamaMakanan2.text.toString()
+                productDua.hargaMenu = etHarga2.text.toString().toInt()
+                productDua.jumlahMenu = etJumlah2.text.toString().toInt()
+                total += productDua.subTotal
+            }
+            if (etNamaMakanan3.text.isNotEmpty() || etHarga3.text.isNotEmpty() || etJumlah3.text.isNotEmpty()) {
+                productTiga.namaMenu = etNamaMakanan3.text.toString()
+                productTiga.hargaMenu = etHarga3.text.toString().toInt()
+                productTiga.jumlahMenu = etJumlah3.text.toString().toInt()
+                total += productTiga.subTotal
+            }
+        }
     }
+
 }
