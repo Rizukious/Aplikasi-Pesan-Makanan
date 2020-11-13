@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.aplikasipesanmakanan.databinding.FragmentDaftarMenuBinding
 
 class DaftarMenuFragment : Fragment() {
@@ -24,8 +25,19 @@ class DaftarMenuFragment : Fragment() {
         binding.apply {
             val args = DaftarMenuFragmentArgs.fromBundle(requireArguments())
             nomorMeja = args.noMeja
+
+            btnHitung.setOnClickListener {view : View ->
+                ambilData(binding)
+                view.findNavController().navigate(DaftarMenuFragmentDirections.actionDaftarMenuFragmentToDaftarBayarFragment(productSatu, productDua, productTiga, args.noMeja, total))
+            }
+
+            btnHome.setOnClickListener {view: View ->
+                view.findNavController().navigate(DaftarMenuFragmentDirections.actionDaftarMenuFragmentToDaftarMejaFragment2())
+            }
+
+            binding
+            return binding.root
         }
-        return binding.root
     }
 
     private fun ambilData(binding: FragmentDaftarMenuBinding) {

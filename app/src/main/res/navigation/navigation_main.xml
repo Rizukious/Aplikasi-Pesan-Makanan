@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/daftarMejaFragment"
         android:name="com.example.aplikasipesanmakanan.DaftarMejaFragment"
-        android:label="fragment_daftar_meja"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_daftar_meja" >
         <action
             android:id="@+id/action_daftarMejaFragment_to_daftarMenuFragment"
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/daftarBayarFragment"
         android:name="com.example.aplikasipesanmakanan.DaftarBayarFragment"
-        android:label="fragment_daftar_bayar"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_daftar_bayar" >
         <argument
             android:name="product1"
@@ -33,11 +33,21 @@
         <argument
             android:name="total"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_daftarBayarFragment_to_daftarMenuFragment"
+            app:destination="@id/daftarMenuFragment"
+            app:popUpTo="@id/daftarMenuFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_daftarBayarFragment_to_daftarMejaFragment"
+            app:destination="@id/daftarMejaFragment"
+            app:popUpTo="@id/daftarMejaFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/daftarMenuFragment"
         android:name="com.example.aplikasipesanmakanan.DaftarMenuFragment"
-        android:label="fragment_daftar_menu"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_daftar_menu" >
         <action
             android:id="@+id/action_daftarMenuFragment_to_daftarBayarFragment"
@@ -45,5 +55,8 @@
         <argument
             android:name="noMeja"
             app:argType="string" />
+        <action
+            android:id="@+id/action_daftarMenuFragment_to_daftarMejaFragment2"
+            app:destination="@id/daftarMejaFragment" />
     </fragment>
 </navigation>

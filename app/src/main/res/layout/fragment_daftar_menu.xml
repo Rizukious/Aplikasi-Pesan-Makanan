@@ -155,17 +155,17 @@
                         android:layout_margin="30dp">
 
                         <Button
+                            android:id="@+id/btn_hitung"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="@string/btn_hitung"
-                            android:layout_marginRight="10dp"
-                            android:onClick="total" />
+                            android:layout_marginRight="10dp" />
 
                         <Button
+                            android:id="@+id/btn_home"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/btn_kembali_menu_awal"
-                            android:onClick="pilihMeja" />
+                            android:text="@string/btn_kembali_menu_awal" />
                     </LinearLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
